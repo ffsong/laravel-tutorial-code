@@ -1,0 +1,11 @@
+{
+  "name": "example",
+  "version": "1.1.0",
+  "description": "apiDoc basic example",
+  "title": "Custom apiDoc browser title",
+  "url" : "http://api.test/",
+  "order":[
+    "Error",
+    "User"
+  ]
+}
