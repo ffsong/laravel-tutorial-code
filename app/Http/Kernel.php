@@ -19,7 +19,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\TrustProxies::class,
-        \App\Http\Middleware\ForceJson::class, //设置json格式
+//        \App\Http\Middleware\ForceJson::class, //设置json格式
     ];
 
     /**

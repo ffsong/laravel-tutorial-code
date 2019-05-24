@@ -48,4 +48,9 @@ class User extends Authenticatable
         return self::where($credentials)->first();
     }
 
+    public function profile()
+    {
+        return  $this->hasOne(UserProfile::class);
+    }
+
 }

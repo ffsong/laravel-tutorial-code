@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use App\User;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Log;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -29,6 +31,9 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot();
 
-        //
+        // 监听模型获取事件
+        User::retrieved(function ($user) {
+            Log::info('从模型中获取用户[' . $user->id . ']:' . $user->name);
+        });
     }
 }
