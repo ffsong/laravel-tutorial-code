@@ -13,3 +13,8 @@ $factory->define(\App\Post::class, function (Faker $faker) {
         'views' => $faker->randomDigit
     ];
 });
+$factory->define(\App\Tag::class, function (Faker $faker) {
+    return [
+        'name' => $faker->unique()->word
+    ];
+});

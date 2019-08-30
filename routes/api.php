@@ -13,6 +13,7 @@ use App\Http\Middleware\CheckAge;
 |
 */
 
+Route::get('/posts/fetch', 'PostController@fetch');
 
 Route::namespace('Api\V1')->prefix('v1')->group(function (){
 
